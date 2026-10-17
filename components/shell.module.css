@@ -1,0 +1,25 @@
+.page { position: relative; }
+:global(html.js) .page:not([data-ready]) { visibility: hidden; }
+
+.preloader {
+  position: fixed; inset: 0; z-index: 9500;
+  background: var(--paper);
+  display: flex; align-items: center; justify-content: center;
+  clip-path: inset(0 0 0 0);
+  perspective: 1200px;
+}
+.preloaderCard { width: min(560px, 86vw); }
+.preloaderFoot {
+  position: absolute; left: clamp(1.25rem, 4vw, 3rem); right: clamp(1.25rem, 4vw, 3rem); bottom: clamp(1.25rem, 4vw, 2.5rem);
+  display: flex; justify-content: space-between; align-items: flex-end;
+  font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted);
+}
+.preloaderNum { font-family: var(--f-display); font-style: var(--display-style); font-size: clamp(3rem, 8vw, 6rem); line-height: .8; letter-spacing: 0; color: var(--ink); }
+
+.curtain {
+  position: fixed; inset: 0; z-index: 9400; display: none;
+  align-items: center; justify-content: center;
+  background: var(--board); color: var(--board-ink);
+  clip-path: inset(100% 0 0 0);
+}
+.curtainLabel { font-family: var(--f-display); font-style: var(--display-style); font-size: clamp(1.6rem, 3vw, 2.4rem); }

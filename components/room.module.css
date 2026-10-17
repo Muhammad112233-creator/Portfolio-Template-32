@@ -1,0 +1,44 @@
+.board {
+  position: relative; overflow: hidden; isolation: isolate;
+  background: linear-gradient(180deg, var(--board) 0%, var(--board-2) 100%);
+  color: var(--board-ink);
+  padding: 0 0 clamp(5rem, 11vw, 9rem);
+}
+.lamp {
+  position: absolute; z-index: -1; top: -30%; left: 50%; width: 120vw; height: 110%; transform: translateX(-50%);
+  background: radial-gradient(ellipse 40% 50% at 50% 30%, color-mix(in srgb, var(--accent) 22%, transparent), transparent 70%);
+  animation: flicker 7s ease-in-out infinite;
+}
+@keyframes flicker { 0%, 100% { opacity: .85; } 45% { opacity: 1; } 50% { opacity: .78; } 55% { opacity: 1; } }
+
+.tape {
+  border-block: 1px solid var(--board-line); overflow: hidden;
+  background: rgba(0, 0, 0, .25);
+  margin-bottom: clamp(4rem, 9vw, 7.5rem);
+}
+.track { display: flex; width: max-content; animation: tape 48s linear infinite; }
+.board:hover .track { animation-play-state: paused; }
+@keyframes tape { to { transform: translateX(-50%); } }
+.item {
+  display: inline-flex; align-items: center; gap: 2.2rem; padding: 1rem 0 1rem 2.2rem;
+  font-family: var(--f-mono); font-size: 11px; letter-spacing: .24em; color: var(--board-muted); white-space: nowrap;
+}
+.dot { width: 5px; height: 5px; background: var(--accent); transform: rotate(45deg); }
+
+.inner { max-width: 880px; }
+.eyebrow { color: var(--board-muted); }
+.title {
+  font-family: var(--f-display); font-style: var(--display-style); font-weight: var(--display-weight);
+  font-size: clamp(3rem, 8.2vw, 7.2rem); line-height: .98; letter-spacing: -.015em; margin: 1.4rem 0 1.6rem;
+}
+.lead { font-size: clamp(1.05rem, 1.6vw, 1.25rem); max-width: 38rem; color: color-mix(in srgb, var(--board-ink) 82%, transparent); }
+.row { display: flex; flex-wrap: wrap; gap: .6rem 2.4rem; margin: 2.2rem 0 2.4rem; padding-top: 1.4rem; border-top: 1px solid var(--board-line); }
+.mono { font-family: var(--f-mono); font-size: 12px; letter-spacing: .06em; color: var(--board-muted); }
+a.mono { color: var(--board-ink); }
+.cta { min-height: 56px; padding: 0 2.2rem; }
+.cta::before { background: var(--board-ink) !important; }
+.cta:hover { color: var(--board) !important; border-color: var(--board-ink) !important; }
+.ghost { background: transparent; color: var(--board-ink); border-color: var(--board-line); min-height: 56px; }
+.ghost::before { background: var(--board-ink) !important; }
+.ghost:hover { color: var(--board) !important; }
+.note { margin-top: 2rem; font-family: var(--f-mono); font-size: 11px; letter-spacing: .06em; color: var(--board-muted); }

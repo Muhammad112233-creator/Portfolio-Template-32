@@ -1,0 +1,57 @@
+.wrap { position: relative; perspective: 1400px; width: 100%; }
+.card {
+  --rx: 0deg; --ry: 0deg; --gx: 30%; --gy: 20%;
+  position: relative; aspect-ratio: 1.68 / 1; width: 100%;
+  background:
+    linear-gradient(180deg, var(--card-sheen, rgba(255,255,255,.35)), rgba(255,255,255,0) 40%),
+    var(--card);
+  color: var(--card-ink);
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius) + 2px);
+  padding: clamp(1rem, 3.2%, 1.6rem) clamp(1.1rem, 4%, 2rem) clamp(1rem, 3.6%, 1.7rem) clamp(2.2rem, 9%, 3.6rem);
+  display: flex; flex-direction: column; justify-content: space-between;
+  transform: rotateX(var(--rx)) rotateY(var(--ry));
+  transform-style: preserve-3d;
+  transition: transform .7s var(--ease-out), background-color .6s;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.6) inset,
+    0 30px 60px -30px rgba(var(--shadow), .45),
+    0 12px 22px -14px rgba(var(--shadow), .35);
+  overflow: hidden;
+}
+.wrap:hover .card { transition: transform .25s ease-out; }
+.shadow {
+  position: absolute; left: 12%; right: 12%; bottom: -9%; height: 18%;
+  background: radial-gradient(ellipse at center, rgba(var(--shadow), .28), transparent 70%);
+  filter: blur(8px);
+}
+.gloss {
+  position: absolute; inset: 0; pointer-events: none; mix-blend-mode: soft-light;
+  background: radial-gradient(circle at var(--gx) var(--gy), rgba(255,255,255,.75), transparent 45%);
+  opacity: .7; transition: opacity .4s;
+}
+/* faint ruled lines like an index card */
+.rules {
+  position: absolute; inset: 0; pointer-events: none; opacity: .55;
+  background: repeating-linear-gradient(180deg, transparent 0 calc(11.5% - 1px), var(--line-soft) calc(11.5% - 1px) 11.5%);
+  background-position: 0 22%;
+}
+/* the red margin line */
+.margin { position: absolute; top: 0; bottom: 0; left: clamp(1.6rem, 6.5%, 2.6rem); width: 1px; background: var(--accent); opacity: .45; }
+/* punched hole at the bottom centre */
+.hole {
+  position: absolute; left: 50%; bottom: 5%; width: 14px; height: 14px; margin-left: -7px; border-radius: 50%;
+  background: var(--paper); box-shadow: inset 0 1px 2px rgba(var(--shadow), .45);
+}
+.top { position: relative; display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; }
+.call { font-family: var(--f-mono); font-size: clamp(9px, 1.6vw, 11px); letter-spacing: .1em; display: flex; flex-direction: column; color: var(--card-ink); }
+.callLabel { font-size: .82em; color: var(--muted); letter-spacing: .18em; text-transform: uppercase; }
+.corner { font-family: var(--f-mono); font-size: clamp(8px, 1.4vw, 10px); letter-spacing: .2em; text-transform: uppercase; color: var(--muted); margin-left: auto; margin-top: .2rem; text-align: right; max-width: 14em; }
+.mono { color: var(--accent); opacity: .85; flex: none; }
+.body { position: relative; }
+.name { font-family: var(--f-caps); font-size: clamp(1.15rem, 3.6vw, 2.15rem); letter-spacing: .14em; line-height: 1.1; font-weight: 500; }
+.rule { height: 1px; background: var(--line-strong); margin: clamp(.5rem, 2%, .9rem) 0; transform-origin: left; }
+.title { font-family: var(--f-caps); font-size: clamp(7.5px, 1.25vw, 10.5px); letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+.foot { margin-top: clamp(.5rem, 2.2%, 1rem); display: flex; justify-content: space-between; gap: .8rem; flex-wrap: wrap; font-family: var(--f-mono); font-size: clamp(8px, 1.3vw, 10.5px); letter-spacing: .06em; }
+.city { font-family: var(--f-caps); letter-spacing: .3em; color: var(--accent); }
+.stampMini { color: var(--accent); border: 1px solid currentColor; padding: 0 .4em; transform: rotate(-4deg); text-transform: uppercase; letter-spacing: .14em; font-size: .88em; }
