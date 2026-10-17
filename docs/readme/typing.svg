@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="60" viewBox="0 0 760 60">
+  <defs><linearGradient id="rb" x1="0" y1="0" x2="2" y2="0" gradientUnits="objectBoundingBox"><stop offset="0.000" stop-color="#ff3b3b"/><stop offset="0.143" stop-color="#ff9f1c"/><stop offset="0.286" stop-color="#ffd23f"/><stop offset="0.429" stop-color="#3ddc84"/><stop offset="0.571" stop-color="#2ec4ff"/><stop offset="0.714" stop-color="#6c63ff"/><stop offset="0.857" stop-color="#ff4ecd"/><stop offset="1.000" stop-color="#ff3b3b"/>
+      <animate attributeName="x1" values="0;-1" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="2;1" dur="6s" repeatCount="indefinite"/></linearGradient></defs>
+  <style>.m{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}</style>
+  <g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.000;0.001;0.249;0.250;1" dur="14.0s" repeatCount="indefinite"/>
+    <clipPath id="c0"><rect x="0" y="0" height="60" width="0"><animate attributeName="width" values="0;0;455;455;0;0" keyTimes="0;0.000;0.113;0.212;0.250;1" dur="14.0s" repeatCount="indefinite"/></rect></clipPath>
+    <text x="20" y="38" clip-path="url(#c0)" class="m" font-size="24" fill="url(#rb)">Rotary edition dial with sound</text></g><g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.250;0.251;0.499;0.500;1" dur="14.0s" repeatCount="indefinite"/>
+    <clipPath id="c1"><rect x="0" y="0" height="60" width="0"><animate attributeName="width" values="0;0;513;513;0;0" keyTimes="0;0.250;0.362;0.463;0.500;1" dur="14.0s" repeatCount="indefinite"/></rect></clipPath>
+    <text x="20" y="38" clip-path="url(#c1)" class="m" font-size="24" fill="url(#rb)">Custom cursor and magnetic buttons</text></g><g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.500;0.501;0.749;0.750;1" dur="14.0s" repeatCount="indefinite"/>
+    <clipPath id="c2"><rect x="0" y="0" height="60" width="0"><animate attributeName="width" values="0;0;498;498;0;0" keyTimes="0;0.500;0.613;0.713;0.750;1" dur="14.0s" repeatCount="indefinite"/></rect></clipPath>
+    <text x="20" y="38" clip-path="url(#c2)" class="m" font-size="24" fill="url(#rb)">Smooth scroll with Lenis and GSAP</text></g><g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.750;0.751;0.999;1.000;1" dur="14.0s" repeatCount="indefinite"/>
+    <clipPath id="c3"><rect x="0" y="0" height="60" width="0"><animate attributeName="width" values="0;0;455;455;0;0" keyTimes="0;0.750;0.863;0.963;1.000;1" dur="14.0s" repeatCount="indefinite"/></rect></clipPath>
+    <text x="20" y="38" clip-path="url(#c3)" class="m" font-size="24" fill="url(#rb)">Edit one file, deploy anywhere</text></g>
+</svg>

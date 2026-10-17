@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320">
+  <defs><linearGradient id="rb" x1="0" y1="0" x2="2" y2="0" gradientUnits="objectBoundingBox"><stop offset="0.000" stop-color="#ff3b3b"/><stop offset="0.143" stop-color="#ff9f1c"/><stop offset="0.286" stop-color="#ffd23f"/><stop offset="0.429" stop-color="#3ddc84"/><stop offset="0.571" stop-color="#2ec4ff"/><stop offset="0.714" stop-color="#6c63ff"/><stop offset="0.857" stop-color="#ff4ecd"/><stop offset="1.000" stop-color="#ff3b3b"/>
+      <animate attributeName="x1" values="0;-1" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="2;1" dur="8s" repeatCount="indefinite"/></linearGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#181513"/><stop offset="1" stop-color="#2a1f1a"/></linearGradient>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#efe8da" opacity=".12"/></pattern>
+  </defs>
+  <style>
+    .t{font-family:Georgia,'Times New Roman',serif;font-style:italic}
+    .m{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:6px}
+    .fade{animation:fade 1.6s ease-out both}
+    .fade2{animation:fade 1.6s .5s ease-out both}
+    .spin{transform-origin:1050px 150px;animation:spin 24s linear infinite}
+    .w1{animation:wave 7s ease-in-out infinite alternate}
+    .w2{animation:wave 9s ease-in-out infinite alternate-reverse}
+    @keyframes fade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    @keyframes wave{from{transform:translateX(0)}to{transform:translateX(-200px)}}
+  </style>
+  <rect width="1200" height="320" rx="18" fill="url(#bg)"/>
+  <rect width="1200" height="320" rx="18" fill="url(#dots)"/>
+  <g opacity=".9">
+    <path class="w1" d="M0 268 C150 238 300 298 450 268 S750 238 900 268 S1200 298 1400 268 V320 H0Z" fill="url(#rb)" opacity=".35"/>
+    <path class="w2" d="M0 288 C200 258 350 318 550 288 S850 258 1050 288 S1300 318 1400 288 V320 H0Z" fill="url(#rb)" opacity=".55"/>
+  </g>
+  <g class="spin" fill="none" stroke="url(#rb)">
+    <circle cx="1050" cy="150" r="78" stroke-width="2"/>
+    <circle cx="1050" cy="150" r="66" stroke-width="1" stroke-dasharray="3 7"/>
+    <circle cx="1050" cy="92" r="14" stroke-width="1.5"/><circle cx="1100" cy="121" r="14" stroke-width="1.5"/>
+    <circle cx="1100" cy="179" r="14" stroke-width="1.5"/><circle cx="1050" cy="208" r="14" stroke-width="1.5"/>
+    <circle cx="1000" cy="179" r="14" stroke-width="1.5"/><circle cx="1000" cy="121" r="14" stroke-width="1.5"/>
+  </g>
+  <circle cx="1050" cy="150" r="28" fill="#efe8da"/>
+  <text x="1050" y="155" text-anchor="middle" class="m" font-size="11" fill="#181513" style="letter-spacing:3px">ENTER</text>
+  <text x="70" y="92" class="m fade" font-size="13" fill="#958d7f">PORTFOLIO TEMPLATE · NEXT.JS · GSAP · LENIS</text>
+  <text x="66" y="172" class="t fade" font-size="76" fill="url(#rb)">The Archive</text>
+  <text x="70" y="216" class="m fade2" font-size="14" fill="#e7e0d1">DRAWN BY HAND · BUILT IN CODE · SIX EDITIONS</text>
+</svg>

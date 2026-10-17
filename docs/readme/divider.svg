@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="14" viewBox="0 0 1200 14">
+  <defs><linearGradient id="rb" x1="0" y1="0" x2="2" y2="0" gradientUnits="objectBoundingBox"><stop offset="0.000" stop-color="#ff3b3b"/><stop offset="0.143" stop-color="#ff9f1c"/><stop offset="0.286" stop-color="#ffd23f"/><stop offset="0.429" stop-color="#3ddc84"/><stop offset="0.571" stop-color="#2ec4ff"/><stop offset="0.714" stop-color="#6c63ff"/><stop offset="0.857" stop-color="#ff4ecd"/><stop offset="1.000" stop-color="#ff3b3b"/>
+      <animate attributeName="x1" values="0;-1" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="2;1" dur="4s" repeatCount="indefinite"/></linearGradient></defs>
+  <rect x="0" y="5" width="1200" height="4" rx="2" fill="url(#rb)"/>
+</svg>
